@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="criaTabela()">Cria Tabela</button>
+
+    <script>
+        async function criaTabela() {
+            // Criando a tabela e os elementos associados
+            let table = document.createElement('table');
+            let headerRow = document.createElement('tr');
+            let headers = ['Nome', 'Email', 'Cidade'];
+
+            headers.forEach(headerText => {
+                let header = document.createElement('th');
+                header.textContent = headerText;
+                headerRow.appendChild(header);
+            });
+
+            table.appendChild(headerRow);
+
+
+            try {
+                // fazendo uma requisição GET à API JSONPlaceholder
+                let response = await fetch('https://jsonplaceholder.typicode.com/users');
+                data = await response.json();
+
+                // processando os dados retornados da API
+                data.forEach(user => {
+                    let row = document.createElement('tr');
+
+                    let name = user.name;
+                    let email = user.email;
+                    let city = user.address.city;
+                
+
+                    let rowData = [name, email, city];
+
+                    rowData.forEach(cellData => {
+                        let cell = document.createElement('td');
+                        cell.textContent = cellData;
+                        row.appendChild(cell);
+                    })
+
+                    table.appendChild(row);
+                });
+                
+            } catch (error) {
+                console.error('Erro ao buscar dados da API:', error);
+            }
+            
+            // Adicionando a tabela ao corpo do documento
+            document.body.appendChild(table)
+        }
+    </script>
+</body>
+
+</html>
