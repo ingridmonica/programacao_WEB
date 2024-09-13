@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização de 4 Divs</title>
+    <style>
+        body {
+            background-image: url('https://wallpapers.com/images/featured/casas-de-harry-potter-tdwajgfcbf9uv8js.jpg');
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        h1 {
+            padding: 7px 0px 7px 18px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .section {
+            width: 50vw;
+            background-color: #00767088;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 17px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        h2 {
+            color: #f2f2f2;
+            line-height: 1rem;
+        }
+        p {
+            font-size: 1.2em;
+            color: #d3d3d3;
+        }
+        img {
+            display: block;
+            max-width: 150px;
+            height: auto;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Requisições Simultâneas com Fetch API - HARRRY POTTER</h1>
+
+    <!-- Seção 1: Atualizada com uma API pública -->
+    <div id="section1" class="section">
+        <h2>Personagem 1</h2>
+        <p id="dado-1">Aguarde, carregando dados...</p>
+        <img id="img-1" src="" alt="Imagem do personagem 1">
+    </div>
+
+    <!-- Seção 2: Atualizada com uma API pública -->
+    <div id="section2" class="section">
+        <h2>Personagem 2</h2>
+        <p id="dado-2">Aguarde, carregando dados...</p>
+        <img id="img-2" src="" alt="Imagem do personagem 2">
+    </div>
+
+    <!-- Seção 3: Atualizada com uma API pública -->
+    <div id="section3" class="section">
+        <h2>Personagem 3</h2>
+        <p id="dado-3">Aguarde, carregando dados...</p>
+        <img id="img-3" src="" alt="Imagem do personagem 3">
+    </div>
+
+    <!-- Seção 4: Atualizada com uma API pública -->
+    <div id="section4" class="section">
+        <h2>Personagem 4</h2>
+        <p id="dado-4">Aguarde, carregando dados...</p>
+        <img id="img-4" src="" alt="Imagem do personagem 4">
+    </div>
+
+    <!-- script js para carregar os dados -->
+    <script src="./scripts/4-divs-fetch-api.js"></script>
+</body>
+</html>
